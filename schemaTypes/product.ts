@@ -20,7 +20,28 @@ export default defineType({
       title: "Images",
     }),
     defineField({ name: "theme", type: "string", title: "Theme" }),
-    defineField({ name: "whatsappLink", type: "url", title: "WhatsApp Enquiry Link" }),
+    defineField({
+      name: "category",
+      type: "string",
+      title: "Category",
+      options: {
+        list: [
+          { title: "Singles", value: "singles" },
+          { title: "Flower basket", value: "flower_basket" },
+          { title: "Bouquets", value: "bouquets" },
+          { title: "Flower pots", value: "flower_pots" },
+          { title: "Magazine", value: "magazine" },
+          { title: "Wall Art", value: "wall_art" },
+        ],
+        layout: "radio",
+      },
+    }),
+    defineField({
+      name: "isNew",
+      type: "boolean",
+      title: "New Arrival",
+      initialValue: false,
+    }),
     defineField({ name: "instagramLink", type: "url", title: "Instagram Product Link" }),
   ],
 });
