@@ -42,6 +42,7 @@ export default defineType({
       title: "New Arrival",
       initialValue: false,
     }),
+    defineField({ name: "price", type: "number", title: "Price" }),
     defineField({ name: "instagramLink", type: "url", title: "Instagram Product Link" }),
   ],
 });
